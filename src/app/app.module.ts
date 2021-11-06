@@ -12,6 +12,11 @@ import {LocationsComponent} from './components/locations/locations.component';
 import {SnacksComponent} from './components/snacks/snacks.component';
 import {MachinesComponent} from './components/machines/machines.component';
 import {BrowserModule} from '@angular/platform-browser';
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatButtonModule} from "@angular/material/button";
+import {_MatMenuDirectivesModule, MatMenuModule} from "@angular/material/menu";
+import {MatCardModule} from "@angular/material/card";
+import {MatExpansionModule} from "@angular/material/expansion";
 
 @NgModule({
   declarations: [
@@ -27,7 +32,13 @@ import {BrowserModule} from '@angular/platform-browser';
     FormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatToolbarModule,
+    MatButtonModule,
+    _MatMenuDirectivesModule,
+    MatMenuModule,
+    MatCardModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent],

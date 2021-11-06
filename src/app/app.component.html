@@ -1,12 +1,16 @@
-<div class="fullscreen container">
-  <div class="menu">
-    <a [routerLink]="['/home']" href="javascript:">Home</a>
-    <a [routerLink]="['/locations']" href="javascript:">Locations</a>
-    <a [routerLink]="['/snacks']" href="javascript:">Snacks</a>
-    <a [routerLink]="['/machines']" href="javascript:">Machines</a>
-  </div>
-  <div class="content">
-    <router-outlet></router-outlet>
-    <span [hidden]="true">sedonax app is running!</span>
-  </div>
+<div class="position-sticky">
+  <mat-toolbar class="d-flex justify-content-between">
+    <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item [routerLink]="['/home']" href="javascript:">Home</button>
+      <button mat-menu-item [routerLink]="['/locations']" href="javascript:">Locations</button>
+      <button mat-menu-item [routerLink]="['/snacks']" href="javascript:">Snacks</button>
+      <button mat-menu-item [routerLink]="['/machines']" href="javascript:">Machines</button>
+    </mat-menu>
+  </mat-toolbar>
 </div>
+<div class="content">
+  <router-outlet></router-outlet>
+  <span [hidden]="true">sedonax app is running!</span>
+</div>
+

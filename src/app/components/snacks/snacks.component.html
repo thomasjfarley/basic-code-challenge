@@ -1,16 +1,20 @@
-<h1>Snacks</h1>
-
-<table>
-    <tr>
+<div class="w-100 d-flex justify-content-center">
+  <mat-card class="w-50">
+    <div mat-card-title>Snack</div>
+    <hr>
+    <table class="w-100">
+      <tr>
         <th>Snack ID</th>
         <th>Snack Name</th>
         <th>Snack Type</th>
         <th>Snack Price</th>
-    </tr>
-    <tr *ngFor="let snack of snackSvc.snacks() | async">
+      </tr>
+      <tr *ngFor="let snack of snackSvc.snacks() | async">
         <td>{{snack.id}}</td>
         <td>{{snack.name}}</td>
         <td>{{snack.category}}</td>
         <td>{{snack.price}}</td>
-    </tr>
-</table>
+      </tr>
+    </table>
+  </mat-card>
+</div>

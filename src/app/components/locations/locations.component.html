@@ -1,12 +1,16 @@
-<h1>Locations</h1>
-
-<table>
-    <tr>
+<div class="w-100 d-flex justify-content-center">
+  <mat-card class="w-50">
+    <div mat-card-title>Locations</div>
+    <hr>
+    <table class="w-100">
+      <tr>
         <th>Location ID</th>
         <th>Location Name</th>
-    </tr>
-    <tr *ngFor="let location of locationsSvc.locations() | async">
+      </tr>
+      <tr *ngFor="let location of locationsSvc.locations() | async">
         <td>{{location.id}}</td>
         <td>{{location.name}}</td>
-    </tr>
-</table>
+      </tr>
+    </table>
+  </mat-card>
+</div>
