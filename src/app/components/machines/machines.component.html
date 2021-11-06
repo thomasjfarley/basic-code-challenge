@@ -1,0 +1,24 @@
+<div *ngIf="contentLoaded | async" class="col-6 d-flex flex-wrap justify-content-center">
+  <h1 class="col-12 text-center">Machines</h1>
+  <div *ngFor="let location of locationService.locations() | async" class="col-12 d-flex flex-wrap justify-content-center">
+    <h2>Machines at {{location.name}}</h2>
+    <div *ngFor="let machine of machineData | async" class="col-12">
+      <div *ngIf="machine.location === location.id">
+        <table class="w-100">
+          <tr>
+            <th>Snack Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+          </tr>
+          <tr *ngFor="let snack of machine.inventory">
+            <td>{{getSnack(snack.id)?.name}}</td>
+            <td>{{getSnack(snack.id)?.price | currency}}</td>
+            <td>{{snack.qty}}</td>
+          </tr>
+        </table>
+        <h3 class="font-weight-bold text-center pt-3">Machine value is {{calculateValue(machine.inventory) | currency}}</h3>
+      </div>
+    </div>
+  </div>
+
+</div>

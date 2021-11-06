@@ -1,0 +1,16 @@
+<h1>Snacks</h1>
+
+<table>
+    <tr>
+        <th>Snack ID</th>
+        <th>Snack Name</th>
+        <th>Snack Type</th>
+        <th>Snack Price</th>
+    </tr>
+    <tr *ngFor="let snack of snackSvc.snacks() | async">
+        <td>{{snack.id}}</td>
+        <td>{{snack.name}}</td>
+        <td>{{snack.category}}</td>
+        <td>{{snack.price}}</td>
+    </tr>
+</table>

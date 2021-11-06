@@ -1,0 +1,32 @@
+app-nav-panel {
+  flex: 1;
+  overflow: hidden;
+}
+
+.fullscreen {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu {
+  padding: 10px;
+
+  > a {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+.content {
+  flex: 1;
+  border-left: 1px solid gray;
+  padding: 10px;
+  overflow-y: scroll;
+  min-width: 94vw;
+}

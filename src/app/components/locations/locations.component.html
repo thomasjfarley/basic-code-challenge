@@ -1,0 +1,12 @@
+<h1>Locations</h1>
+
+<table>
+    <tr>
+        <th>Location ID</th>
+        <th>Location Name</th>
+    </tr>
+    <tr *ngFor="let location of locationsSvc.locations() | async">
+        <td>{{location.id}}</td>
+        <td>{{location.name}}</td>
+    </tr>
+</table>
