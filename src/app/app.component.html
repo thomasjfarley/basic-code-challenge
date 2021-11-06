@@ -1,11 +1,12 @@
 <div class="fullscreen container">
-    <div class="menu">
-        <a [routerLink]="['/home']" href="javascript:">Home</a>
-        <a [routerLink]="['/locations']" href="javascript:">Locations</a>
-        <a [routerLink]="['/snacks']" href="javascript:">Snacks</a>
-        <a [routerLink]="['/machines']" href="javascript:">Machines</a>
-    </div>
-    <div class="content">
-        <router-outlet></router-outlet>
-    </div>
+  <div class="menu">
+    <a [routerLink]="['/home']" href="javascript:">Home</a>
+    <a [routerLink]="['/locations']" href="javascript:">Locations</a>
+    <a [routerLink]="['/snacks']" href="javascript:">Snacks</a>
+    <a [routerLink]="['/machines']" href="javascript:">Machines</a>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+    <span [hidden]="true">sedonax app is running!</span>
+  </div>
 </div>
