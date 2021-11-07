@@ -17,6 +17,7 @@ export class MachinesComponent implements OnInit {
   machineData = new Observable<Machine[]>();
   snackData: Snack[] = [];
   contentLoaded = new BehaviorSubject<boolean>(false);
+  openPanel = 0;
 
   constructor(
     public machineService: MachinesService,

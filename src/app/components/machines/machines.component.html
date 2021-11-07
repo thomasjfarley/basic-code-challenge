@@ -3,8 +3,8 @@
     <div mat-card-title>Machines</div>
     <hr>
     <div *ngIf="contentLoaded | async" class="d-flex flex-wrap justify-content-center">
-      <mat-accordion *ngFor="let location of locationService.locations() | async; let i = index">
-        <mat-expansion-panel hideToggle>
+      <mat-accordion *ngFor="let location of locationService.locations() | async; let i = index" class="w-100">
+        <mat-expansion-panel hideToggle [expanded]="i === openPanel" (opened)="openPanel = i">
           <mat-expansion-panel-header>
             <mat-panel-title>Machines at {{location.name}}</mat-panel-title>
           </mat-expansion-panel-header>
