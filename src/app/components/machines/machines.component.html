@@ -3,8 +3,9 @@
     <div mat-card-title>Machines</div>
     <hr>
     <div *ngIf="contentLoaded | async" class="d-flex flex-wrap justify-content-center">
-      <mat-accordion *ngFor="let location of locationService.locations() | async; let i = index" class="w-100">
-        <mat-expansion-panel hideToggle [expanded]="i === openPanel" (opened)="openPanel = i">
+      <mat-accordion class="w-100">
+        <mat-expansion-panel *ngFor="let location of locationService.locations() | async; let i = index"
+                             [expanded]="i === openPanel" (opened)="openPanel = i">
           <mat-expansion-panel-header>
             <mat-panel-title>Machines at {{location.name}}</mat-panel-title>
           </mat-expansion-panel-header>
@@ -23,7 +24,8 @@
                     <td>{{snack.qty}}</td>
                   </tr>
                 </table>
-                <h3 class="font-weight-bold text-center pt-3">Machine value is {{calculateValue(machine.inventory) | currency}}</h3>
+                <h3 class="font-weight-bold text-center pt-3">Machine value
+                  is {{calculateValue(machine.inventory) | currency}}</h3>
               </div>
             </div>
           </div>
